@@ -66,5 +66,5 @@ int main()
 		sharedresource.flag = true;
 		sharedresource.cv.notify_one();
 	}
-	std::this_thread::sleep_for(1s); //This is going to get fixed in other versions. 
+	std::this_thread::sleep_for(1s); //This is going to get fixed in future versions. 
 }
