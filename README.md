@@ -1,4 +1,5 @@
-# C++ Concurrent programming How to kill threads
+# C++ Concurrent programming 
+# How to kill threads
 While C++ does not provide a straightforward method for cleanly terminating threads, 
 it is possible to achieve a clean exit using a combination of synchronization primitives such as std::condition_variable, 
 std::unique_lock, and std::wait_for. 
