@@ -55,12 +55,22 @@ private:
 int main()
 {
 	START_BANNER_MAIN("Main");
+
 	A a("A");
+
+	//Resources shared between threads 
 	SharedResource sharedresource;
+
+	//Spawn a thread 
 	std::thread thA(a, std::ref(sharedresource));
 	thA.detach();
+
+	//Key Press
 	_getch();
+
+	//Signal to thread 
 	{
+		
 		Debug::out("Key is pressed\n");
 		std::unique_lock<std::mutex> lock(sharedresource.mtx);
 		sharedresource.flag = true;
