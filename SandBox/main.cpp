@@ -73,7 +73,7 @@ int main()
 	{
 		
 		Debug::out("Key is pressed\n");
-		std::unique_lock<std::mutex> lock(sharedresource.mtx);
+		std::lock_guard<std::mutex> lock(sharedresource.mtx);
 		sharedresource.flag = true;
 		sharedresource.cv.notify_one();
 	}
