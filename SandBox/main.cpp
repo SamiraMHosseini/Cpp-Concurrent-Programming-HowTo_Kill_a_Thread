@@ -68,7 +68,7 @@ int main()
 	//Key Press
 	_getch();
 
-	//Signal to thread 
+	//Signal to the thread 
 	{
 		
 		Debug::out("Key is pressed\n");
