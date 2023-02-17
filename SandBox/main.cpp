@@ -32,6 +32,7 @@ public:
 		{
 
 			std::unique_lock<std::mutex> lock(sharedresource.mtx);
+			//Wait for 500ms unless there is an interrupt or a signal
 			if (sharedresource.cv.wait_for(lock, 500ms, [&]() -> bool { return sharedresource.flag; }))
 			{
 				break;
