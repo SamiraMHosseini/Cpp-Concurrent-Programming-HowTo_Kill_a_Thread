@@ -6,7 +6,7 @@ struct SharedResource
 	{
 
 	}
-	//These are resources that are shared between 
+	//These are resources that are shared between threads
 	std::mutex mtx;
 	std::condition_variable cv;
 	bool flag;
